@@ -24,7 +24,6 @@ function interpret!(ctx, expr:: Expr)
     result = @match expr begin
         Expr(:block, xs...) => for x∈xs r(x) end
         :($f($(args...)))   => r(f)(map(r,args)...)
-        :($f($x,$y))        => r(f)(r(x),r(y))
         :($k = $v)          => (ctx[k] = r(v))
         :(return $x)        => (return x)
         x                   => error("Not yet implemented")
