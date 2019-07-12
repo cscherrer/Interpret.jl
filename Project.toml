@@ -1,0 +1,7 @@
+name = "Interpret"
+uuid = "91699f90-a4ae-11e9-178e-3748f0df0a14"
+authors = ["Chad Scherrer <chad.scherrer@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+MLStyle = "d8e11817-5142-5d16-987a-aa16d5891078"
